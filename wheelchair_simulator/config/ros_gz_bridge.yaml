@@ -30,6 +30,30 @@
   gz_type_name: "ignition.msgs.CameraInfo"
   direction: "GZ_TO_ROS"
 
+- ros_topic_name: "/<robot_name>/d435i/infra1/image"
+  gz_topic_name: "/world/default/model/<robot_name>/link/infra1_frame/sensor/infra1/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: "GZ_TO_ROS"
+
+- ros_topic_name: "/<robot_name>/d435i/infra1/camera_info"
+  gz_topic_name: "/world/default/model/<robot_name>/link/infra1_frame/sensor/infra1/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "ignition.msgs.CameraInfo"
+  direction: "GZ_TO_ROS"
+
+- ros_topic_name: "/<robot_name>/d435i/infra2/image"
+  gz_topic_name: "/world/default/model/<robot_name>/link/infra2_frame/sensor/infra2/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "ignition.msgs.Image"
+  direction: "GZ_TO_ROS"
+
+- ros_topic_name: "/<robot_name>/d435i/infra2/camera_info"
+  gz_topic_name: "/world/default/model/<robot_name>/link/infra2_frame/sensor/infra2/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "ignition.msgs.CameraInfo"
+  direction: "GZ_TO_ROS"
+
 - ros_topic_name: "/<robot_name>/d435i/depth/depth_image/points"
   gz_topic_name: "/world/default/model/<robot_name>/link/d435i/sensor/depth/depth_image/points"
   ros_type_name: "sensor_msgs/msg/PointCloud2"
