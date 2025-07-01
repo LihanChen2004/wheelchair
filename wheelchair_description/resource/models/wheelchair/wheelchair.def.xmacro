@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <xmacro_include uri="model://wheelchair/wheels.def.xmacro" />
+
+  <xmacro_define_block name="wheelchair">
+    <link name="base_footprint" />
+    <joint name="base_to_chassis" type="fixed">
+      <pose>0 0 0.076 0 0 0</pose>
+      <parent>base_footprint</parent>
+      <child>base_link</child>
+    </joint>
+    
+    <link name="base_link">
+      <inertial>
+        <pose>-0.1 0 0.1 0 0 0</pose>
+        <mass>46.2</mass>
+        <inertia>
+          <ixx>1.55925</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.55925</iyy>
+          <iyz>0</iyz>
+          <izz>1.55925</izz>
+        </inertia>
+      </inertial>
+      <collision name="base_link_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <xmacro_block name="geometry_mesh" uri="model://wheelchair/meshes/base/tugbot_simp.stl"/>
+      </collision>
+      <visual name="base_link_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <xmacro_block name="geometry_mesh" uri="model://wheelchair/meshes/base/tugbot_simp.dae"/>
+      </visual>
+      <visual name="light_link_visual">
+        <pose>-0.1 0 0.1945 0 1.57079632679 0</pose>
+        <xmacro_block name="geometry_mesh" uri="model://wheelchair/meshes/light_link/light_led.stl"/>
+        <material>
+          <ambient>0.0 0.0 0 1</ambient>
+          <diffuse>0.0 0.0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>0 1 0 1</emissive>
+        </material>
+      </visual>
+      <visual name="warnign_light_visual">
+        <pose>-0.099 0 0.195 0 1.57079632679 0</pose>
+        <xmacro_block name="geometry_mesh" uri="model://wheelchair/meshes/light_link/light.stl"/>
+        <material>
+          <ambient>0.1 0.05 0 0.5</ambient>
+          <diffuse>1 0.5 0 0.5</diffuse>
+          <specular>1 0.5 0 0.5</specular>
+          <emissive>1 0.5 0 0.5</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <!--wheels-->
+    <xmacro_block name="wheelchair_wheel_caster" prefix="front" parent="base_link" 
+                  pose="0.145 0 0.0345 1.570796327 0 0" radius="0.025"/>
+    
+    <xmacro_block name="wheelchair_wheel_caster" prefix="back" parent="base_link" 
+                  pose="-0.225 0 0.035 1.570796327 0 0" radius="0.035"/>
+    
+    <xmacro_block name="wheelchair_wheel_drive" prefix="left" parent="base_link" 
+                  pose="0 0.257 0.195 -1.570796327 0 0" axis_direction="0 0 1"/>
+    
+    <xmacro_block name="wheelchair_wheel_drive" prefix="right" parent="base_link" 
+                  pose="0 -0.257 0.195 1.570796327 0 0" axis_direction="0 0 -1"/>
+    
+  </xmacro_define_block>
+</sdf>
