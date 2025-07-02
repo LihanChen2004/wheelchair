@@ -17,7 +17,7 @@ def generate_launch_description():
     realsense_camera_node = Node(
         package="realsense2_camera",
         executable="realsense2_camera_node",
-        name="realsense2_camera",
+        name="camera",
         namespace="",
         parameters=[
             {
@@ -103,7 +103,7 @@ def generate_launch_description():
 
     # Add the actions to launch all of the navigation nodes
     ld.add_action(realsense_camera_node)
-    ld.add_action(visual_slam_launch_container)
+    # ld.add_action(visual_slam_launch_container)
     ld.add_action(start_rviz)
 
     return ld
