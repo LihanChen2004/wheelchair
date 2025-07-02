@@ -270,7 +270,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /wheelchair_1/d435i/color/image
+        Value: /d435i/color/image
       Value: true
       Visibility:
         Grid: true
@@ -312,7 +312,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /wheelchair_1/d435i/depth/depth_image/points
+        Value: /d435i/depth/depth_image/points
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -346,7 +346,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /wheelchair_1/livox/lidar
+        Value: /livox/lidar
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -361,7 +361,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /wheelchair_1/d435i/infra1/image
+        Value: /d435i/infra1/image
       Value: true
       Visibility:
         Grid: true
@@ -384,7 +384,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /wheelchair_1/d435i/infra2/image
+        Value: /d435i/infra2/image
       Value: true
       Visibility:
         Grid: true

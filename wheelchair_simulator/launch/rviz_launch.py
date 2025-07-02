@@ -10,7 +10,6 @@ def generate_launch_description():
         package="rviz2",
         executable="rviz2",
         name="rviz2",
-        namespace="wheelchair_1",
         arguments=[
             "-d",
             os.path.join(
@@ -18,11 +17,6 @@ def generate_launch_description():
                 "rviz",
                 "visualize.rviz",
             ),
-        ],
-        remappings=[
-            ("/tf", "tf"),
-            ("/tf_static", "tf_static"),
-            ("/d435i/color/camera_info", "d435i/color/camera_info"),
         ],
     )
 

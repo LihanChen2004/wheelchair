@@ -11,14 +11,6 @@ from sdformat_tools.urdf_generator import UrdfGenerator
 
 
 def generate_launch_description():
-    # Map fully qualified names to relative ones so the node's namespace can be prepended.
-    # In case of the transforms (tf), currently, there doesn't seem to be a better alternative
-    # https://github.com/ros/geometry2/issues/32
-    # https://github.com/ros/robot_state_publisher/pull/30
-    # TODO(orduno) Substitute with `PushNodeRemapping`
-    #              https://github.com/ros2/launch_ros/issues/56
-    remappings = [("/tf", "tf"), ("/tf_static", "tf_static")]
-
     pkg_simulator = get_package_share_directory("wheelchair_simulator")
     pkg_robot_description = get_package_share_directory("wheelchair_description")
 
@@ -54,12 +46,6 @@ def generate_launch_description():
         urdf_generator.parse_from_sdf_string(robot_xml)
         robot_urdf_xml = urdf_generator.to_string()
 
-        # replace the <robot_name> in the bridge config file
-        aft_replace_ros_bridge_params = ReplaceString(
-            source_file=bridge_config,
-            replacements={"<robot_name>": robot["name"]},
-        )
-
         spawn_robot = Node(
             package="ros_gz_sim",
             executable="create",
@@ -84,8 +70,6 @@ def generate_launch_description():
         robot_state_publisher = Node(
             package="robot_state_publisher",
             executable="robot_state_publisher",
-            namespace=robot["name"],
-            remappings=remappings,
             parameters=[
                 {
                     "use_sim_time": True,
@@ -97,8 +81,7 @@ def generate_launch_description():
         robot_ign_bridge = Node(
             package="ros_gz_bridge",
             executable="parameter_bridge",
-            namespace=robot["name"],
-            parameters=[{"config_file": aft_replace_ros_bridge_params}],
+            parameters=[{"config_file": bridge_config}],
         )
 
         ld.add_action(spawn_robot)

@@ -3,8 +3,8 @@ world: "warehouse"
 robots:
 
   warehouse:
-    - name: "wheelchair_1"
+    - name: "wheelchair"
       x_pose: "0.0"
       y_pose: "0.0"
-      z_pose: "1.2"
+      z_pose: "0.0"
       yaw: "0.0"
