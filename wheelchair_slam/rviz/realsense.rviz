@@ -52,27 +52,27 @@ Visualization Manager:
       Frames:
         All Enabled: false
         camera_accel_frame:
-          Value: true
+          Value: false
         camera_accel_optical_frame:
-          Value: true
+          Value: false
         camera_aligned_depth_to_infra1_frame:
-          Value: true
+          Value: false
         camera_gyro_frame:
-          Value: true
+          Value: false
         camera_gyro_optical_frame:
-          Value: true
+          Value: false
         camera_imu_frame:
-          Value: true
+          Value: false
         camera_imu_optical_frame:
-          Value: true
+          Value: false
         camera_infra1_frame:
-          Value: true
+          Value: false
         camera_infra1_optical_frame:
-          Value: true
+          Value: false
         camera_infra2_frame:
-          Value: true
+          Value: false
         camera_infra2_optical_frame:
-          Value: true
+          Value: false
         camera_link:
           Value: true
         map:
@@ -137,7 +137,7 @@ Visualization Manager:
       Enabled: true
       Name: Gravity
       Namespaces:
-        gravity: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
