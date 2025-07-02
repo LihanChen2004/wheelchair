@@ -11,7 +11,8 @@
     
     <pose>0 0 0.2 0 0 0</pose>
     <xmacro_block name="wheelchair"/>
-    <xmacro_block name="d435i" prefix="" parent="base_link" pose="0.2 0.2 0.4 1.57 0 0"/>
+    <xmacro_block name="d435i" prefix="left_" parent="base_link" pose="0.2 0.2 0.4 1.57 0.1 -0.5"/>
+    <xmacro_block name="d435i" prefix="right_" parent="base_link" pose="0.2 -0.2 0.4 1.57 0.1 0.5"/>
     <xmacro_block name="livox" prefix="" parent="base_link" pose="-0.16 0.0 0.48 ${pi/6} 0.0 ${pi/2}" update_rate="20" samples="1875"/>
     
     <!--diff drive plugin-->
