@@ -4,8 +4,6 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
-        - /TF1/Frames1
         - /TF1/Tree1
         - /Loop closure1/Topic1
         - /Localizer1/Localizer Map1
@@ -331,7 +329,7 @@ Visualization Manager:
           Enabled: true
           Name: PG Edges2
           Namespaces:
-            edges: true
+            {}
           Topic:
             Depth: 5
             Durability Policy: Volatile
@@ -344,7 +342,7 @@ Visualization Manager:
           Enabled: true
           Name: PG Edges
           Namespaces:
-            edges: true
+            {}
           Topic:
             Depth: 5
             Durability Policy: Volatile
@@ -353,7 +351,7 @@ Visualization Manager:
             Reliability Policy: Reliable
             Value: /visual_slam/vis/pose_graph_edges
           Value: true
-      Enabled: true
+      Enabled: false
       Name: Pose Graph
     - Class: rviz_common/Group
       Displays:
@@ -422,7 +420,7 @@ Visualization Manager:
           Scale: 1
           Value: false
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 1
       Name: Odometry
       Position Tolerance: 0.009999999776482582
@@ -443,20 +441,19 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /visual_slam/tracking/odometry
-      Value: true
+      Value: false
     - Class: rviz_default_plugins/MarkerArray
-      Enabled: true
+      Enabled: false
       Name: Velocity
       Namespaces:
-        angular velocity: true
-        linear velocity: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /visual_slam/vis/velocity
-      Value: true
+      Value: false
     - Class: rviz_default_plugins/Image
       Enabled: true
       Max Value: 1
@@ -531,15 +528,15 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/ThirdPersonFollower
-      Distance: 10.685957908630371
+      Distance: 6.408318996429443
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -2.6469075679779053
-        Y: -0.02868805080652237
+        X: 0.009795904159545898
+        Y: 0.00534212589263916
         Z: 0.0054794498719275
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806

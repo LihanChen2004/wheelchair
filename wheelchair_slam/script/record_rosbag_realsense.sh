@@ -3,7 +3,7 @@
 # Record realsense rosbag in real world 
 source install/setup.zsh
 
-ros2 bag record -o realsense_$(date +%Y%m%d_%H%M%S) \
+ros2 bag record -o spin_$(date +%Y%m%d_%H%M%S) \
   /clock \
   /tf \
   /tf_static \

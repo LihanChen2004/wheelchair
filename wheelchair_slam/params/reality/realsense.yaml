@@ -1,0 +1,36 @@
+visual_slam_node:
+  ros__parameters:
+    use_sim_time: false
+    enable_image_denoising: false
+    rectified_images: true
+    enable_imu_fusion: true
+    gyro_noise_density: 0.000244
+    gyro_random_walk: 0.000019393
+    accel_noise_density: 0.001862
+    accel_random_walk: 0.003
+    calibration_frequency: 200.0
+    image_jitter_threshold_ms: 40.00
+    base_frame: camera_link
+    imu_frame: camera_gyro_optical_frame
+    enable_slam_visualization: true
+    enable_landmarks_view: true
+    enable_observations_view: true
+    camera_optical_frames:
+      - camera_infra1_optical_frame
+      - camera_infra2_optical_frame
+    load_map_folder_path: ""
+    save_map_folder_path: ""
+
+camera:
+  ros__parameters:
+    enable_infra1: true
+    enable_infra2: true
+    enable_color: false
+    enable_depth: false
+    depth_module.emitter_enabled: 0
+    depth_module.profile: "640x360x90"
+    enable_gyro: true
+    enable_accel: true
+    gyro_fps: 200
+    accel_fps: 200
+    unite_imu_method: 2
