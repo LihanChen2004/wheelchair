@@ -89,7 +89,8 @@ def generate_launch_description():
             Node(
                 package="realsense2_camera",
                 executable="realsense2_camera_node",
-                name="camera",
+                name="left_d435i",
+                namespace="",
                 output="screen",
                 respawn_delay=2.0,
                 parameters=[configured_params],
@@ -104,8 +105,13 @@ def generate_launch_description():
             ComposableNode(
                 package="realsense2_camera",
                 plugin="realsense2_camera::RealSenseNodeFactory",
-                name="camera",
+                name="left_d435i",
+                namespace="",
                 parameters=[configured_params],
+                remappings=[
+                    ("left_d435i/infra1/image_rect_raw", "left_d435i/infra1/image"),
+                    ("left_d435i/infra2/image_rect_raw", "left_d435i/infra2/image"),
+                ],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
         ],

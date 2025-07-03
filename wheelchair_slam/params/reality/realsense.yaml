@@ -18,10 +18,11 @@ visual_slam_node:
     camera_optical_frames:
       - camera_infra1_optical_frame
       - camera_infra2_optical_frame
+    localize_on_startup: true
     load_map_folder_path: ""
     save_map_folder_path: ""
 
-camera:
+left_d435i:
   ros__parameters:
     enable_infra1: true
     enable_infra2: true
