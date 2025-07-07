@@ -1,0 +1,12 @@
+visual_slam_node:
+  ros__parameters:
+    use_sim_time: true
+    enable_image_denoising: true
+    rectified_images: true
+    enable_slam_visualization: true
+    enable_observations_view: true
+    enable_landmarks_view: true
+    base_frame: base_footprint
+    localize_on_startup: true
+    load_map_folder_path: ""
+    save_map_folder_path: ""
