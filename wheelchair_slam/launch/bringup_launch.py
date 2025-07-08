@@ -34,10 +34,13 @@ from nav2_common.launch import RewrittenYaml
 
 
 def generate_launch_description():
-    # 获取源代码目录而不是share目录，以便后续保存map到源代码目录
-    current_file = os.path.realpath(__file__)
-    bringup_dir = os.path.dirname(os.path.dirname(current_file))
+    # Get the launch directory
+    bringup_dir = get_package_share_directory("wheelchair_slam")
     launch_dir = os.path.join(bringup_dir, "launch")
+
+    # Abosolute path used for save vslam map file
+    tmp_current_file = os.path.realpath(__file__)
+    abosolute_bringup_dir = os.path.dirname(os.path.dirname(tmp_current_file))
 
     # Create the launch configuration variables
     namespace = LaunchConfiguration("namespace")
@@ -81,14 +84,14 @@ def generate_launch_description():
     declare_world_cmd = DeclareLaunchArgument(
         "world",
         # Generate timestamp for map file
-        default_value=f"map_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+        default_value=f"{datetime.now().strftime('%Y%m%d_%H%M%S')}",
         description="Select world: 'rmul_2024' or 'rmuc_2024' or 'rmul_2025' or 'rmuc_2025' (map file share the same name as the this parameter)",
     )
 
     declare_map_folder_path_cmd = DeclareLaunchArgument(
         "map_folder_path",
         default_value=[
-            TextSubstitution(text=os.path.join(bringup_dir, "map", "")),
+            TextSubstitution(text=os.path.join(abosolute_bringup_dir, "map", "")),
             world,
         ],
         description="Full path to prior map folder (For vslam) to load",
