@@ -91,7 +91,7 @@ def generate_launch_description():
     declare_map_folder_path_cmd = DeclareLaunchArgument(
         "map_folder_path",
         default_value=[
-            TextSubstitution(text=os.path.join(abosolute_bringup_dir, "map", "")),
+            TextSubstitution(text=os.path.join(abosolute_bringup_dir, "maps", "")),
             world,
         ],
         description="Full path to prior map folder (For vslam) to load",
