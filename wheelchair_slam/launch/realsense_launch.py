@@ -111,6 +111,7 @@ def generate_launch_description():
                 remappings=[
                     ("left_d435i/infra1/image_rect_raw", "left_d435i/infra1/image"),
                     ("left_d435i/infra2/image_rect_raw", "left_d435i/infra2/image"),
+                    ("left_d435i/depth/image_rect_raw", "left_d435i/depth/image"),
                 ],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
