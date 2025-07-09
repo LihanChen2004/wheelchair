@@ -112,6 +112,7 @@ def generate_launch_description():
                     ("left_d435i/infra1/image_rect_raw", "left_d435i/infra1/image"),
                     ("left_d435i/infra2/image_rect_raw", "left_d435i/infra2/image"),
                     ("left_d435i/depth/image_rect_raw", "left_d435i/depth/image"),
+                    ("left_d435i/color/image_raw", "left_d435i/color/image"),
                 ],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
