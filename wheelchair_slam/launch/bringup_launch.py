@@ -150,6 +150,7 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource(
                     os.path.join(launch_dir, "realsense_launch.py")
                 ),
+                condition=IfCondition(PythonExpression(["not ", use_sim_time])),
                 launch_arguments={
                     "namespace": namespace,
                     "use_sim_time": use_sim_time,
