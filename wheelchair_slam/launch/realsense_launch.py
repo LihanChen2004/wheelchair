@@ -94,6 +94,12 @@ def generate_launch_description():
                 output="screen",
                 respawn_delay=2.0,
                 parameters=[configured_params],
+                remappings=[
+                    ("left_d435i/infra1/image_rect_raw", "left_d435i/infra1/image"),
+                    ("left_d435i/infra2/image_rect_raw", "left_d435i/infra2/image"),
+                    ("left_d435i/depth/image_rect_raw", "left_d435i/depth/image"),
+                    ("left_d435i/color/image_raw", "left_d435i/color/image"),
+                ],
             ),
         ],
     )
