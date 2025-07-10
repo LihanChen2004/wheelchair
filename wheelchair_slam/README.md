@@ -1,5 +1,31 @@
 # wheelchair_slam
 
+## Dependencies
+
+- CUDA version: 12.6
+
+- Driver Version: 560.35.05
+
+  ```Shell
+  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.0-1_all.deb
+  sudo dpkg -i cuda-keyring_1.0-1_all.deb
+  sudo apt update
+
+  sudo apt install nvidia-driver-560
+  ```
+
+```bash
+rosdep install -r --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
+```
+
+## Build
+
+```bash
+colcon build --symlink-install
+```
+
+## Quick Start
+
 - Run VSLAM with realsense d435i
 
   ```bash
