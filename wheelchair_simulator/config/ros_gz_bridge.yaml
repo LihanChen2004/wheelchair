@@ -24,6 +24,12 @@
   gz_type_name: "ignition.msgs.Image"
   direction: "GZ_TO_ROS"
 
+- ros_topic_name: "/left_d435i/depth/camera_info"
+  gz_topic_name: "/world/default/model/wheelchair/link/left_d435i/sensor/left_depth/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "ignition.msgs.CameraInfo"
+  direction: "GZ_TO_ROS"
+
 - ros_topic_name: "/left_d435i/depth/depth_image/points"
   gz_topic_name: "/world/default/model/wheelchair/link/left_d435i/sensor/left_depth/depth_image/points"
   ros_type_name: "sensor_msgs/msg/PointCloud2"
@@ -76,6 +82,12 @@
   gz_topic_name: "/world/default/model/wheelchair/link/right_d435i/sensor/right_depth/depth_image"
   ros_type_name: "sensor_msgs/msg/Image"
   gz_type_name: "ignition.msgs.Image"
+  direction: "GZ_TO_ROS"
+
+- ros_topic_name: "/right_d435i/depth/camera_info"
+  gz_topic_name: "/world/default/model/wheelchair/link/right_d435i/sensor/right_depth/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "ignition.msgs.CameraInfo"
   direction: "GZ_TO_ROS"
 
 - ros_topic_name: "/right_d435i/depth/depth_image/points"
