@@ -40,8 +40,8 @@
             <sensor name="${prefix}color" type="camera">
                 <always_on>1</always_on>
                 <update_rate>30</update_rate>
-                <ignition_frame_id>${prefix}color_optical_frame</ignition_frame_id>
                 <camera>
+                    <optical_frame_id>${prefix}color_optical_frame</optical_frame_id>
                     <horizontal_fov>${69.4/180*pi}</horizontal_fov>
                     <image>
                         <width>1920</width>
@@ -63,8 +63,8 @@
             <sensor name="${prefix}depth" type="depth_camera">
                 <always_on>1</always_on>
                 <update_rate>10</update_rate>
-                <ignition_frame_id>${prefix}depth_optical_frame</ignition_frame_id>
                 <camera>
+                    <optical_frame_id>${prefix}depth_optical_frame</optical_frame_id>
                     <horizontal_fov>${85.2/180*pi}</horizontal_fov>
                     <image>
                         <width>1280</width>
@@ -118,8 +118,8 @@
             <sensor name="${prefix}infra1" type="camera">
                 <always_on>1</always_on>
                 <update_rate>30</update_rate>
-                <ignition_frame_id>${prefix}infra1_optical_frame</ignition_frame_id>
                 <camera>
+                    <optical_frame_id>${prefix}infra1_optical_frame</optical_frame_id>
                     <horizontal_fov>1.57</horizontal_fov>
                     <image>
                         <width>640</width>
@@ -161,8 +161,8 @@
             <sensor name="${prefix}infra2" type="camera">
                 <always_on>1</always_on>
                 <update_rate>30</update_rate>
-                <ignition_frame_id>${prefix}infra2_optical_frame</ignition_frame_id>
                 <camera>
+                    <optical_frame_id>${prefix}infra2_optical_frame</optical_frame_id>
                     <horizontal_fov>1.57</horizontal_fov>
                     <image>
                         <width>640</width>
@@ -259,4 +259,20 @@
         </link>
         
     </xmacro_define_block>
+
+  <model name='simple_d435i'>
+    <pose>0 0 0.2 0 0 0</pose>
+    <link name="base_link">
+      <inertial>
+        <xmacro_block name="inertia_box" m="0.4" x="0.4" y="0.4" z="0.4" />
+      </inertial>
+      <visual name="visual">
+        <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
+      </visual>
+      <collision name="collision">
+        <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
+      </collision>
+    </link>
+    <xmacro_block name="d435i" prefix="simple_" parent="base_link" pose="0 0 0.2 0 0 0"/>
+  </model>
 </sdf>
