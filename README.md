@@ -4,6 +4,8 @@
 
 Autonomous wheelchair navigation using ROS2 and NVIDIA Isaac ROS. It integrates various components, including visual SLAM, nvblox, and Gazebo simulation environments.
 
+https://github.com/user-attachments/assets/75684dfa-155a-429c-8133-4c733169c3b6
+
 > [!NOTE]
 > Full navigation stacks NOT Done.
 
