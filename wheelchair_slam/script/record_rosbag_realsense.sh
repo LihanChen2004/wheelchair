@@ -3,9 +3,7 @@
 # Record realsense rosbag in real world 
 source install/setup.zsh
 
-ros2 bag record -o spin_$(date +%Y%m%d_%H%M%S) \
-  /clock \
-  /tf \
+ros2 bag record -o realsense_$(date +%Y%m%d_%H%M%S) \
   /tf_static \
   /camera/infra1/image_rect_raw \
   /camera/infra1/camera_info \
