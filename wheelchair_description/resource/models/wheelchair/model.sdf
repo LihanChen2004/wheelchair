@@ -304,7 +304,7 @@
 		</link>
 		<!-- camera body, with origin at bottom screw mount -->
 		<joint name="left_d435i_bottom_joint" type="fixed">
-			<pose relative_to="base_link">0 0 0.4 0 0 0</pose>
+			<pose relative_to="base_link">0.2 0.2 0.4 1.57 0.1 -0.5</pose>
 			<parent>base_link</parent>
 			<child>left_bottom_screw_frame</child>
 		</joint>
