@@ -4,10 +4,8 @@ import yaml
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from nav2_common.launch import ReplaceString
-from xmacro.xmacro4sdf import XMLMacro4sdf
-
 from sdformat_tools.urdf_generator import UrdfGenerator
+from xmacro.xmacro4sdf import XMLMacro4sdf
 
 
 def generate_launch_description():
