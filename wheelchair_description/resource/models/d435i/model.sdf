@@ -5,7 +5,6 @@
 <!-- =================================================================================== -->
 <sdf version="1.7">
 	<!--macro definition: d435i-->
-	<!--Livox mid360-->
 	<model name="simple_d435i">
 		<pose>0 0 0.2 0 0 0</pose>
 		<link name="base_link">
@@ -35,7 +34,6 @@
 				</geometry>
 			</collision>
 		</link>
-		<!--update_rate(10-15),samples(400)-->
 		<!-- camera body, with origin at bottom screw mount -->
 		<joint name="simple_d435i_bottom_joint" type="fixed">
 			<pose relative_to="base_link">0 0 0.2 0 0 0</pose>
